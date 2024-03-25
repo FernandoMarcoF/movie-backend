@@ -1,0 +1,26 @@
+### trending
+GET http://localhost:9000/api/movies/trending
+
+### all movies
+GET http://localhost:9000/api/movies/
+
+### movie title
+GET http://localhost:9000/api/movies/mongo
+
+### toprated
+GET http://localhost:9000/api/movies/toprated
+
+### images
+GET http://localhost:9000/api/movies/movie/images?id=693134
+
+### videos
+GET http://localhost:9000/api/movies/movie/videos?id=693134
+
+### credits
+GET http://localhost:9000/api/movies/movie/credits?id=693134
+
+### presonDetails
+GET http://localhost:9000/api/movies/movie/person?id=933238
+
+### Endopoint desconocido
+GET http://localhost:9000/hola/
