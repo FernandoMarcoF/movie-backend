@@ -1,13 +1,18 @@
 import mongoose from 'mongoose'
+import dotenv from 'dotenv'
 import { Movie } from '../models/movieModel'
 import { Genre } from '../models/genreModel'
 import { IGenre, IMovie } from '../interfaces/movie.interface'
 
-const conectionString = 'mongodb+srv://fmarco:aZBCJpwDuUDIFaei@cluster0.v6hmfsf.mongodb.net/movies_dataset?retryWrites=true&w=majority&appName=Cluster0'
+dotenv.config()
+
+const conectionString = process.env.CONECTIONSTRING
 
 const conectMongo = async () => {
   try {
-    await mongoose.connect(conectionString)
+    if(conectionString){
+      await mongoose.connect(conectionString)
+    }
     console.log('Database conected')
   } catch (error) {
     console.error(error)
